@@ -13,7 +13,7 @@ This repository is the official implementation of the **CVPR2023** paper "DISC: 
 If you find this repo is useful, please cite the following BibTeX entry. Thank you very much!
 
 ```
-@InProceedings{Li_2023_CVPR,
+@InProceedings{Li_2023_DISC,
     author    = {Li, Yifan and Han, Hu and Shan, Shiguang and Chen, Xilin},
     title     = {DISC: Learning From Noisy Labels via Dynamic Instance-Specific Selection and Correction},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
@@ -106,8 +106,8 @@ bash shs/DISC_cifar10.sh
 ```
 Furthermore, there are <span style="color:#0099be">three types of label noise</span> to choose from: symmetric noise ('<span style="color:#0099be">sym</span>'), asymmetric noise ('<span style="color:#0099be">asym</span>'), and instance noise ('<span style="color:#0099be">ins</span>'). You can also <span style="color:#0099be">adjust the noise ratio</span> by changing the 'noise_rates' hyper-parameter.
 
-### 4.2 Real-world noise datasets (Animals-10, Food-101N, Mini-WebVision, Clothing1M)
-If you want to run the results of DISC on Animals-10, the bash scripts can be shown as:
+### 4.2 Real-world noise datasets (Animals-10N, Food-101, Mini-WebVision, Clothing1M)
+If you want to run the results of DISC on Animals-10N, the bash scripts can be shown as:
 ```bash
 model_name='DISC' # the extra model name of the algorithm
 gpuid='0' # the gpu to assign
@@ -139,7 +139,7 @@ We hope this repository will serve as a codebase for LNL in the future. Anyone w
 This codebase refers to Co-learning [[link](https://github.com/chengtan9907/Co-learning-Learning-from-noisy-labels-with-self-supervision)], DivideMix [[link](https://github.com/LiJunnan1992/DivideMix)], ELR [[link](https://github.com/shengliu66/ELR)], think you all!
 
 ## 7. Contact
-If you have any other questions, please contact liyifan20g@ict.ac.cn
+If you have any other questions, please contact liyifan20g@ict.ac.cn.
 
 ## License
 This repo is licensed under MIT License.
