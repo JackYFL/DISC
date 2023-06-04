@@ -95,9 +95,6 @@ class DISC:
                 self.momentum = 0.95
             self.start_epoch = 15
             
-            if config['noise_type']=='ins':
-                self.start_epoch = 15
-            
         elif config['dataset'] == 'clothing1M':
             self.start_epoch = 10
             self.momentum = 0.95
