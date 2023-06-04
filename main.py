@@ -155,9 +155,12 @@ def main():
 
     acc_list, acc_all_list = [], []
     best_acc, best_epoch = 0.0, 0
-
+    
+    # loading training labels
     if config['algorithm'] == 'DISC' or config['algorithm'] == 'StandardCETest':
         if 'cifar' in config['dataset']:
+            model.get_labels(trainloader)
+        if 'tiny_imagenet' in config['dataset']:
             model.get_labels(trainloader)
         elif 'clothing' in config['dataset']:
             model.get_clothing_labels(config['root'])
