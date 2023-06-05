@@ -160,7 +160,7 @@ def main():
     if config['algorithm'] == 'DISC' or config['algorithm'] == 'StandardCETest':
         if 'cifar' in config['dataset']:
             model.get_labels(trainloader)
-        if 'tiny_imagenet' in config['dataset']:
+        elif 'tiny_imagenet' in config['dataset']:
             model.get_labels(trainloader)
         elif 'clothing' in config['dataset']:
             model.get_clothing_labels(config['root'])
