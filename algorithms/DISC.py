@@ -344,7 +344,7 @@ class DISC:
 
             ###############Correction##############
             ws_threshold = (self.w_prev_confidence + self.s_prev_confidence)/2 + self.sigma
-            ws_threshold = torch.min(ws_threshold, torch.tensor(0.90).to(self.device))
+            ws_threshold = torch.min(ws_threshold, torch.tensor(0.99).to(self.device))
             self.correction_flags = ws_prob_max > ws_threshold
             self.correction_flags = self.correction_flags & (~ self.selected_flags) # P-(C+H)
             #######################################
