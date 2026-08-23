@@ -119,7 +119,7 @@ def SolarizeAdd(img, v, max_v, bias=0, threshold=128):
     v = _int_parameter(v, max_v) + bias
     if random.random() < 0.5:
         v = -v
-    img_np = np.array(img).astype(np.int)
+    img_np = np.array(img).astype(int)
     img_np = img_np + v
     img_np = np.clip(img_np, 0, 255)
     img_np = img_np.astype(np.uint8)
